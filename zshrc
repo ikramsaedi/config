@@ -18,3 +18,13 @@ alias gcm="git commit -m"
 alias gs="git status"
 alias glo="git log --oneline"
 alias python=/usr/bin/python3
+alias ls='ls --color'
+
+export PATH="$PATH:/Users/ikramsaedi/.dotnet/tools"
+export DOTNET_ROOT="/opt/homebrew/opt/dotnet/libexec"
+export PATH="/opt/homebrew/opt/dotnet@6/bin:$PATH"
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+source <(fzf --zsh)
