@@ -1,3 +1,8 @@
+# ctrl + r history
+source <(fzf --zsh)
+
+export PATH=/opt/homebrew/bin:/opt/openssl/bin:$PATH
+
 autoload -Uz vcs_info
 precmd() { vcs_info }
 # auto loads ur version control info
@@ -17,14 +22,7 @@ PROMPT='%U%B%n%u ${PWD/#$HOME/~}%b [%B%F{076}${vcs_info_msg_0_}%f%b] %% '
 alias gcm="git commit -m"
 alias gs="git status"
 alias glo="git log --oneline"
-alias python=/usr/bin/python3
 alias ls='ls --color'
-
-export PATH="$PATH:/Users/ikramsaedi/.dotnet/tools"
-export DOTNET_ROOT="/opt/homebrew/opt/dotnet/libexec"
-export PATH="/opt/homebrew/opt/dotnet@6/bin:$PATH"
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-source <(fzf --zsh)
+alias gco="git checkout"
+alias gcan="git commit --amend --no-edit"
+alias gca="git commit --amend"
