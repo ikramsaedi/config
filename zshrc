@@ -19,6 +19,10 @@ PROMPT='%U%B%n%u ${PWD/#$HOME/~}%b [%B%F{076}${vcs_info_msg_0_}%f%b] %% '
 # %U = underline
 # %B = bold
 
+# when this is set, when cmd is prefixed w/ 1 leading whitespace,
+# it will not be saved to the shell history anymore
+setopt HIST_IGNORE_SPACE
+
 alias gcm="git commit -m"
 alias gs="git status"
 alias glo="git log --oneline"
